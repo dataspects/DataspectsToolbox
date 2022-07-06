@@ -3,40 +3,40 @@
 # https://docs.meilisearch.com/reference/api/keys.html
 
 curl -s \
-  -X POST 'http://localhost:7700/keys' \
+  -X POST "$MEILI_SERVER/keys" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \
-  --data-binary '{
-    "description": "wgDataspectsSearchSearchKey",
-    "actions": ["search"],
-    "indexes": ["mediawiki"],
-    "expiresAt": null
-  }' \
+  --data-binary "{
+    \"description\": \"wgDataspectsSearchSearchKey\",
+    \"actions\": [\"search\"],
+    \"indexes\": [\"$INDEX\"],
+    \"expiresAt\": null
+  }" \
   | jq .
 
 curl -s \
-  -X POST 'http://localhost:7700/keys' \
+  -X POST "$MEILI_SERVER/keys" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \
-  --data-binary '{
-    "description": "wgDataspectsSearchWriteKey",
-    "actions": [
-      "documents.add",
-      "documents.delete"
+  --data-binary "{
+    \"description\": \"wgDataspectsSearchWriteKey\",
+    \"actions\": [
+      \"documents.add\",
+      \"documents.delete\"
     ],
-    "indexes": ["mediawiki"],
-    "expiresAt": null
-  }' \
+    \"indexes\": [\"$INDEX\"],
+    \"expiresAt\": null
+  }" \
   | jq .
 
 curl -s \
-  -X POST 'http://localhost:7700/keys' \
+  -X POST "$MEILI_SERVER/keys" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \
-  --data-binary '{
-    "description": "mediawiki-MASTER-key",
-    "actions": ["*"],
-    "indexes": ["mediawiki"],
-    "expiresAt": null
-  }' \
+  --data-binary "{
+    \"description\": \"mediawiki-MASTER-key\",
+    \"actions\": [\"*\"],
+    \"indexes\": [\"$INDEX\"],
+    \"expiresAt\": null
+  }" \
   | jq .

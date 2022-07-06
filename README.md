@@ -1,7 +1,10 @@
 # DataspectsSearchCLI
 
+```
+export MEILI_SERVER=
 export MEILI_MASTER_KEY=
 export INDEX=
+```
 
 - https://docs.meilisearch.com/reference/api/overview.html
 - https://docs.meilisearch.com/  

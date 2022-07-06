@@ -3,7 +3,7 @@
 # https://docs.meilisearch.com/reference/api/settings.html
 
 curl -s \
-  -X POST "http://localhost:7700/indexes/$INDEX/settings" \
+  -X POST "$MEILI_SERVER/indexes/$INDEX/settings" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \
   --data-binary '{

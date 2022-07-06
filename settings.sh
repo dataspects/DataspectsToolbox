@@ -1,6 +1,6 @@
 #!/bin/bash
 
 curl -s \
-  -X GET 'http://localhost:7700/settings' \
+  -X GET "$MEILI_SERVER/settings" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .

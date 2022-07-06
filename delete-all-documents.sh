@@ -1,6 +1,6 @@
 #!/bin/bash
 
 curl -s \
-  -X DELETE "http://localhost:7700/indexes/$INDEX/documents" \
+  -X DELETE "$MEILI_SERVER/indexes/$INDEX/documents" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .

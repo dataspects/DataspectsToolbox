@@ -1,7 +1,7 @@
 #!/bin/bash
 
 curl -s \
-  -X POST "http://localhost:7700/indexes/$INDEX/documents" \
+  -X POST "$MEILI_SERVER/indexes/$INDEX/documents" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \
   --data-binary '[
