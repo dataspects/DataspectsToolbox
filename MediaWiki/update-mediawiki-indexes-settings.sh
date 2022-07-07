@@ -8,6 +8,7 @@ curl -s \
   -H 'Content-Type: application/json' \
   --data-binary '{
     "filterableAttributes": [
+      "ds0__source",
       "ds0__source.1v10",
       "ds0__source.1v11",
       "ds0__source.1v12",
@@ -15,12 +16,14 @@ curl -s \
       "eppo0__hasEntityType",
       "eppo0__hasEntityType.1v10",
       "eppo0__hasEntityType.1v11",
-      "mw0__text",
+      "ds0__text",
       "mw0__wikitext",
       "mw0__attachment.text",
       "mw0__attachment.type",
       "annotations.predicate",
-      "annotations.objectLiteral"
+      "annotations.objectLiteral",
+      "escam0__sender",
+      "escam0__room"
     ]
   }' \
   | jq .
