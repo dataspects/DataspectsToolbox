@@ -1,8 +1,8 @@
 # DataspectsSearchCLI
 
 ```
-export MEILI_SERVER=
-export MEILI_MASTER_KEY=
+export MEILI_SERVER=http://localhost:7700
+export MEILI_MASTER_KEY=masterKey
 export INDEX=
 ```
 
