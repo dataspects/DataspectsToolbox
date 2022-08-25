@@ -2,7 +2,7 @@
 
 # https://docs.meilisearch.com/reference/api/settings.html
 
-echo "Meili server at $MEILI_SERVER"
+echo "Meili server and index: $MEILI_SERVER and $INDEX"
 read -p "Continue? (y/n)" -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then

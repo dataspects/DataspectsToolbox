@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Meili server at $MEILI_SERVER"
+echo "Meili server and index: $MEILI_SERVER and $INDEX"
 
 curl -s \
   -X POST "$MEILI_SERVER/indexes/$INDEX/search" \
