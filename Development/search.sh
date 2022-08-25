@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Meili server at $MEILI_SERVER"
+
 curl -s \
   -X POST "$MEILI_SERVER/indexes/$INDEX/search" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
