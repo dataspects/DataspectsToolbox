@@ -25,6 +25,8 @@ curl -s \
       "eppo0__hasEntityType.1v10",
       "eppo0__hasEntityType.1v11",
       "eppo0__hasEntityType.1v12",
+      "ck0__containsCognitiveKeyword.1v10",
+      "ck0__containsCognitiveKeyword.1v11",
       "ds0__text",
       "mw0__wikitext",
       "mw0__attachment.text",
