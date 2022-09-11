@@ -15,7 +15,5 @@ curl -s \
   -X POST "$MEILI_SERVER/indexes/$INDEX/search" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \
-  --data-binary '{ "q": "bankroll", "filter": [
-        "eppo0__hasEntityType=\"Event\""
-    ] }' \
+  --data-binary '{ "q": "ComposerHookHandler" }' \
    | jq .
