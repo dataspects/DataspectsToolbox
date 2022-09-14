@@ -37,6 +37,7 @@ curl -s \
       "mw0__wikitext",
       "mw0__attachment.text",
       "mw0__attachment.type",
+      "mw0__attachment.thumbURL",
       "annotations.predicate",
       "annotations.objectLiteral",
       "escam0__sender",
