@@ -33,6 +33,7 @@ curl -s \
       "ds0__specialAspect.1v11",
       "ds0__allPredicates.1v10",
       "ds0__allPredicates.1v11",
+      "ds0__allPredicates.1v12",
       "ds0__text",
       "mw0__wikitext",
       "mw0__attachment.text",
