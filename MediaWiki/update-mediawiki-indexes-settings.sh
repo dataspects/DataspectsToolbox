@@ -36,6 +36,7 @@ curl -s \
       "ds0__allPredicates.1v12",
       "ds0__text",
       "mw0__wikitext",
+      "mw0__namespace",
       "mw0__attachment.text",
       "mw0__attachment.type",
       "mw0__attachment.thumbURL",
