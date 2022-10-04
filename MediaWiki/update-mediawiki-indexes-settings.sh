@@ -10,7 +10,7 @@ then
     exit
 fi
 
-curl -s \
+curl -s -k \
   -X PATCH "$MEILI_SERVER/indexes/$INDEX/settings" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \

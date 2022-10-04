@@ -8,7 +8,7 @@ then
     exit
 fi
 
-curl -s \
+curl -s -k \
   -X DELETE "$MEILI_SERVER/indexes/$INDEX" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .

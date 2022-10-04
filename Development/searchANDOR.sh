@@ -3,7 +3,7 @@
 
 echo "Meili server and index: $MEILI_SERVER and $INDEX"
 
-# curl -s \
+# curl -s -k \
 #   -X POST "$MEILI_SERVER/indexes/$INDEX/search" \
 #   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
 #   -H 'Content-Type: application/json' \
@@ -12,7 +12,7 @@ echo "Meili server and index: $MEILI_SERVER and $INDEX"
 #     ] }' \
 #    | jq .
 
-curl -s \
+curl -s -k \
   -X POST "$MEILI_SERVER/indexes/$INDEX/search" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \

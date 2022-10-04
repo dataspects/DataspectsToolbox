@@ -10,7 +10,7 @@ then
     exit
 fi
 
-curl -s \
+curl -s -k \
   -X POST "$MEILI_SERVER/keys" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \
@@ -22,7 +22,7 @@ curl -s \
   }" \
   | jq .
 
-curl -s \
+curl -s -k \
   -X POST "$MEILI_SERVER/keys" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \
@@ -37,7 +37,7 @@ curl -s \
   }" \
   | jq .
 
-curl -s \
+curl -s -k \
   -X POST "$MEILI_SERVER/keys" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \

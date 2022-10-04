@@ -8,7 +8,7 @@ then
     exit
 fi
 
-curl -s \
+curl -s -k \
   -X GET "$MEILI_SERVER/indexes/$INDEX/stats" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .
