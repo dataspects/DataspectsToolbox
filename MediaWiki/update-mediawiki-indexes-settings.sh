@@ -43,7 +43,8 @@ curl -s -k \
       "annotations.predicate",
       "annotations.objectLiteral",
       "escam0__sender",
-      "escam0__room"
+      "escam0__room",
+      "release_timestamp"
     ]
   }' \
   | jq .
