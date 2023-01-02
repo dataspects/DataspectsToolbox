@@ -21,7 +21,8 @@ curl -s -k \
       "text"
     ],
     "filterableAttributes": [
-      "release_timestamp"
+      "release_timestamp",
+      "xmlTag"
     ],
     "rankingRules": [
       "text:desc",
