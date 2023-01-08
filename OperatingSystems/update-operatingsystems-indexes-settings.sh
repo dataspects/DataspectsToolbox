@@ -21,6 +21,7 @@ curl -s -k \
       "text"
     ],
     "filterableAttributes": [
+      "id",
       "release_timestamp",
       "xmlTag"
     ],
