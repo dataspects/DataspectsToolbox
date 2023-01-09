@@ -5,9 +5,9 @@
 
 GET="$MEILI_SERVER/tasks?statuses=enqueued,processing,failed"
 
-curl -s -k \
+curl --silent --insecure \
   -X GET $GET \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .
 
-echo "Above you see the tasks at $GET"
+echo "Above you see the response to command $GET"

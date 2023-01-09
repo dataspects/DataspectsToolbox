@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@meilisearch/instant-meilisearch": "^0.10.1",
+    "chart.js": "^4.1.2",
+    "instantsearch.js": "^4.49.3",
+    "vis-network": "^9.1.2"
+  }
+}

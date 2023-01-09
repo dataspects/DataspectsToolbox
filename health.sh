@@ -8,7 +8,7 @@ then
     exit
 fi
 
-curl -s -k \
+curl --silent --insecure \
   -X GET "$MEILI_SERVER/health" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .

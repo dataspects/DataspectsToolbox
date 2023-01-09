@@ -2,7 +2,7 @@
 
 GET="$MEILI_SERVER/indexes/$INDEX/stats"
 
-curl -s -k \
+curl --silent --insecure \
   -X GET $GET \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .

@@ -10,12 +10,12 @@ then
     exit
 fi
 
-curl -s -k \
+curl --silent --insecure \
   -X DELETE "$MEILI_SERVER/indexes/$INDEX" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .
 
-curl -s -k \
+curl --silent --insecure \
   -X POST "$MEILI_SERVER/indexes" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
   -H 'Content-Type: application/json' \

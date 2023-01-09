@@ -8,7 +8,11 @@ then
     exit
 fi
 
-curl -s -k \
-  -X DELETE "$MEILI_SERVER/tasks?statuses=failed,canceled,succeeded" \
+DELETE="$MEILI_SERVER/tasks?statuses=enqueued,processing,failed"
+
+curl --insecure \
+  -X DELETE $DELETE \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
    | jq .
+
+echo "Above you see the response to command $DELETE"
