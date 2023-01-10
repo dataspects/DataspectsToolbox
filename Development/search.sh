@@ -4,7 +4,7 @@ TERM="Canasta"
 echo "Meili server and index: $MEILI_SERVER and $INDEX"
 
 QUERY='{
-  "q": "abuse"
+  "q": "Cargo"
 }'
 # QUERY='{
 #   "q": "affiliated",

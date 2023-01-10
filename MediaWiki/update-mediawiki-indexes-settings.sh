@@ -12,6 +12,8 @@ then
     exit
 fi
 
+# https://github.com/meilisearch/charabia/blob/main/CONTRIBUTING.md
+
 curl --silent --insecure \
   -X PATCH "$MEILI_SERVER/indexes/$INDEX/settings" \
   -H "Authorization: Bearer $MEILI_MASTER_KEY" \
@@ -53,13 +55,15 @@ curl --silent --insecure \
       "release_timestamp"
     ],
     "rankingRules": [
-      "eppo0__hasEntityTitle:desc",
       "words",
       "typo",
       "proximity",
       "attribute",
       "sort",
       "exactness"
-    ]
+    ],
+    "pagination": {
+      "maxTotalHits": 10000
+    }
   }' \
   | jq .
