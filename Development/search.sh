@@ -3,15 +3,19 @@
 TERM="Canasta"
 echo "Meili server and index: $MEILI_SERVER and $INDEX"
 
-QUERY='{
-  "q": "Cargo"
-}'
 # QUERY='{
-#   "q": "affiliated",
+#   "q": "TWebC"
+# }'
+# QUERY='{
+#   "q": "TWebC",
+#   "limit": 1,
 #   "filter": [
-#     "eppo0__hasEntityType="Aspect""
+#     "mw0__namespace=File"
 #   ]
 # }'
+QUERY='{
+  "q": "mistaken"
+}'
 # QUERY='{
 #   "q": "TERM",
 #   "limit": 4,
