@@ -4,7 +4,7 @@
 # https://docs.meilisearch.com/learn/advanced/asynchronous_operations.html#which-operations-are-async
 # https://docs.meilisearch.com/learn/core_concepts/relevancy.html
 
-echo "Meili server and index: $MEILI_SERVER and $INDEX"
+echo "Meili server and index: $DS_MEILI_SERVER and $DS_MEILI_INDEX"
 read -p "Continue? (y/n)" -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
@@ -13,8 +13,8 @@ then
 fi
 
 curl --silent --insecure \
-  -X PATCH "$MEILI_SERVER/indexes/$INDEX/settings" \
-  -H "Authorization: Bearer $MEILI_MASTER_KEY" \
+  -X PATCH "$DS_MEILI_SERVER/indexes/$DS_MEILI_INDEX/settings" \
+  -H "Authorization: Bearer $DS_MEILI_MASTERKEY" \
   -H 'Content-Type: application/json' \
   --data-binary '{
     "searchableAttributes": [

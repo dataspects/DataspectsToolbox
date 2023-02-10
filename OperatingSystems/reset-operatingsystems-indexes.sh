@@ -2,7 +2,7 @@
 
 # https://docs.meilisearch.com/reference/api/indexes.html
 
-echo "Meili server and index: $MEILI_SERVER and $INDEX"
+echo "Meili server and index: $DS_MEILI_SERVER and $DS_MEILI_INDEX"
 read -p "Continue? (y/n)" -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
@@ -11,16 +11,16 @@ then
 fi
 
 curl --silent --insecure \
-  -X DELETE "$MEILI_SERVER/indexes/$INDEX" \
-  -H "Authorization: Bearer $MEILI_MASTER_KEY" \
+  -X DELETE "$DS_MEILI_SERVER/indexes/$DS_MEILI_INDEX" \
+  -H "Authorization: Bearer $DS_MEILI_MASTERKEY" \
    | jq .
 
 curl --silent --insecure \
-  -X POST "$MEILI_SERVER/indexes" \
-  -H "Authorization: Bearer $MEILI_MASTER_KEY" \
+  -X POST "$DS_MEILI_SERVER/indexes" \
+  -H "Authorization: Bearer $DS_MEILI_MASTERKEY" \
   -H 'Content-Type: application/json' \
   --data-binary "{
-    \"uid\": \"$INDEX\",
+    \"uid\": \"$DS_MEILI_INDEX\",
     \"primaryKey\": \"id\"
   }" \
   | jq .

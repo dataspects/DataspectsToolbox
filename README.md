@@ -2,7 +2,7 @@
 
 ```
 export MEILI_SERVER=http://localhost:7700
-export MEILI_MASTER_KEY=masterKey
+export DS_MEILI_MASTERKEY=masterKey
 export INDEX=
 ```
 
